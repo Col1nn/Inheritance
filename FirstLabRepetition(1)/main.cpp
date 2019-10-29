@@ -8,8 +8,28 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+
+class Parent
+{
+public:
+    int id_age_p;
+};
+
+class Child : public Parent
+{
+public:
+    int id_age_c;
+};
+
+int main()
+{
+    Child obj;
+    obj.id_age_c = 7;
+    obj.id_age_p = 30;
+    
+    cout << " The age of the child is: " << obj.id_age_c << endl;
+    cout << " The age of the parent is: " << obj.id_age_p << endl;
     return 0;
 }
